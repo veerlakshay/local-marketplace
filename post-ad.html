@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/compressorjs@1.1.1/dist/compressor.min.js"></script>
+
+    <title>Post Ad</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Post Your Ad</h1>
+        <a href="view-products.html" class="primary-btn">Back to Products</a>
+    </div>
+    <div class="form-container">
+        <form id="post-ad-form">
+            <input type="text" id="title" placeholder="Product Title" required>
+            <textarea id="description" placeholder="Product Description" required></textarea>
+            <input type="number" id="price" placeholder="Price" required>
+            <input type="text" id="contact" placeholder="Contact Information" required>
+            <input type="file" id="image" required>
+            <button type="submit" class="primary-btn">Post Ad</button>
+        </form>
+    </div>
+
+    <script src="js/firebase.js" type="module"></script>
+    <script src="js/app.js" type="module"></script>
+    <script type="module">
+        import { postAd } from './js/app.js';
+
+        document.getElementById("post-ad-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const title = document.getElementById("title").value;
+            const description = document.getElementById("description").value;
+            const price = document.getElementById("price").value;
+            const contact = document.getElementById("contact").value;
+            const file = document.getElementById("image").files[0];
+
+            await postAd(title, description, price, contact, file);
+        });
+    </script>
+</body>
+</html>

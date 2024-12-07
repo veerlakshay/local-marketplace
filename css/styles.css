@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.auth-container, .form-container, .products-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h1, .form-container h1 {
+    text-align: center;
+    color: #d32f2f;
+}
+
+input, textarea, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    background: #d32f2f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #b71c1c;
+}
+
+.primary-btn, .secondary-btn {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.primary-btn {
+    background: #d32f2f;
+}
+
+.secondary-btn {
+    background: #333;
+}
+
+.primary-btn:hover {
+    background: #b71c1c;
+}
+
+.secondary-btn:hover {
+    background: #555;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #d32f2f;
+    color: white;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.product-card {
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.product-card h2 {
+    margin: 10px 0 5px;
+    color: #d32f2f;
+}
+
+#logout-btn{
+    width: 20%;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Create Your Account</h1>
+        <form id="signup-form">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" class="primary-btn">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="index.html">Login here</a>.</p>
+    </div>
+
+    <script src="js/firebase.js" type="module"></script>
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Products</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Fanshawe Marketplace</h1>
+        <a href="post-ad.html" class="primary-btn">Post Ad</a>
+        <button id="logout-btn" class="secondary-btn">Logout</button>
+    </div>
+    <div class="products-container" id="products-container">
+        <!-- Product cards will be dynamically loaded here -->
+    </div>
+
+    <script src="js/firebase.js" type="module"></script>
+    <script src="js/app.js" type="module"></script>
+
+    <script type="module">
+        // Wait for the DOM to be ready
+        import { viewProducts, logout } from './js/app.js';;
+
+        window.addEventListener('load', () => {
+            // Call viewProducts after app.js is loaded
+            viewProducts(); // This will work now as app.js is loaded
+        });
+
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            logout();
+        });
+    </script>
+</body>
+
+</html>
